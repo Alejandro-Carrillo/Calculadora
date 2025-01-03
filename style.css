@@ -1,0 +1,95 @@
+:root {
+  --color-principal: rgb(35, 35, 90);
+  --color-segudario: rgb(58, 58, 58);
+  --color-terceario: #233c6b;
+  --color-texto: #d4d4d4;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  user-select: none;
+}
+
+
+
+.cuerpo {
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+  top: calc(50vh - 200px);
+  left: calc(50% - 120px);
+  gap: 5px;
+  width: 250px;
+
+  background-color: var(--color-principal);
+  border-radius: 10px;
+  border: 5px solid var(--color-texto);
+  box-shadow: 7px 7px 17px #535252;
+}
+
+.pantalla {
+  display: flex;
+  grid-column: 1/-1;
+  height: 50px;
+  justify-content: right;
+  color: var(--color-principal);
+  background-color: var(--color-texto);
+  font-size: 23px;
+  font-weight: bold;
+  padding: 0 10px;
+  border: 2px solid var(--color-terceario);
+  border-radius: 10px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  color: var(--color-texto);
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10%;
+  background-color: var(--color-terceario);
+  border: 2px solid var(--color-segudario);
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.btn_c {
+  background-color: var(--color-segudario);
+  border: 2px solid var(--color-segudario);
+}
+
+.btn:hover {
+  background-color: var(--color-texto);
+  color: var(--color-principal);
+  border: 2px solid var(--color-principal);
+}
+
+.c,
+.igual {
+  grid-column: span 2;
+}
+
+.igual {
+  background-color: green;
+}
+
+.copy {
+  position: absolute;
+  display: block;
+  width: 100%;
+  text-align: center;
+  bottom: -50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: var(--color-principal);
+}
