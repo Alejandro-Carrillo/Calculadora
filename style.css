@@ -92,4 +92,5 @@
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   color: var(--color-principal);
+  text-decoration: none;
 }
